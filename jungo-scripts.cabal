@@ -1,0 +1,39 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.37.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           jungo-scripts
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/jungo-startup#readme>
+homepage:       https://github.com/jungoai/jungo-scripts#readme
+bug-reports:    https://github.com/jungoai/jungo-scripts/issues
+author:         Mohsen Nezamolmolki
+maintainer:     thelight.mn@gmail.com
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/jungoai/jungo-scripts
+
+executable jungochain-run
+  main-is: JungochainRun.hs
+  other-modules:
+      Paths_jungo_scripts
+  hs-source-dirs:
+      scripts
+  default-extensions:
+      OverloadedStrings
+      DeriveGeneric
+      DeriveAnyClass
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson ==2.2.3.0
+    , base >=4.7 && <5
+    , text
+    , turtle ==1.6.2
+    , yaml
+  default-language: Haskell2010

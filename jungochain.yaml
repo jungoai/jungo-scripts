@@ -1,0 +1,24 @@
+node:
+  version: "latest"
+  name: "Node1234" # To show in telemetry UI
+  # path: "" # Optional, default = "$HOME/.jungochain"
+  chain_type: "Devnet" # Devnet | Mainnet | Local
+  # telemetry_url: # Optional, default = []
+  #   - "wss://telemetry.polkadot.io/submit/ 0"
+  is_boot_node: false
+  boot_nodes: # It used if node is a participant node (not boot node)
+    #   *ip-version   *protocol *p2p
+    #   |   *ip       |   *port |   *peer node id
+    - "/ip4/52.14.41.79/tcp/30333/p2p/12D3KooWPVLR5YFa6nBcXU4wi7KJtwSx1VGuYQ4gzS3QTLkTFhSm"
+  is_validator: false
+  # secret_phrase: ""
+  # password: "123456"
+  # key: "" # Generate by `<chain-bin> key generate-node-key`
+  is_archive: false
+  is_rpc: true
+network:
+  port: 30333
+  rpc_port: 9944
+logging:
+  max_size: "10m"
+  max_file: 10
