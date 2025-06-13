@@ -1,22 +1,25 @@
 # Jungo Scripts
 
-## Jungochain Run
+## Jungochain Runner
 
+Enter dev environment:
 ```bash
-cp jungochain.yaml ~/.jungochain.yaml
+nix develop
 ```
 
 Build:
 ```bash
-stack build
+cabal build
 ```
 
 Run:
 ```bash
-stack exec jungochain-run
+cabal run jungochain-runner
+```
+Or
+```bash
+cabal run jungochain-runner -- [node-config-path] [spec-path]
 ```
 
-Build & Run:
-```bash
-stack run jungochain-run
-```
+Default node-config-path is `$PWD/.jungochain.yaml`
+Default spec-path is `$PWD/.spec.json`
