@@ -14,10 +14,10 @@ source-repository head
   type: git
   location: https://github.com/jungoai/jungo-scripts
 
-executable jungochain-runner
-  main-is:            JungochainRunner.hs
+executable jungochain-run
+  main-is:            JungochainRun.hs
   -- other-modules:
-  hs-source-dirs:     scripts
+  hs-source-dirs:     src
   default-extensions:
     NoImplicitPrelude
     OverloadedStrings
